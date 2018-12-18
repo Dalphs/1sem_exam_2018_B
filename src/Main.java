@@ -1,4 +1,10 @@
-public class Main {
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class Main extends Application {
 
     /**
      * This class has two constant classvariables that are public, SOFTWARE_VERSION and MEDIA_MAPPE
@@ -17,6 +23,18 @@ public class Main {
         for (String s: media.readMediaFolder("media")) {
             System.out.println(s);
         }
+        launch(args);
+
+
+
+    }
+
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("Gui.fxml"));
+        primaryStage.setTitle("Files in folder");
+        primaryStage.setScene(new Scene(root, 250, 400));
+        primaryStage.show();
+
 
     }
 }
