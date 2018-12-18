@@ -128,7 +128,9 @@ Commit ændringerne.
 ### Opgave 9 - Refactoring 
 TV2 vil gerne have, at brugernes videoer og billeder skulle også indgå i systemet. Udvid systemet, så den kan skelne mellem bruger-genereret indhold og indhold som er lavet af TV2. (Hint: Kan du tilføje en instansvariable, som indikerer brugergenereret indhold? På hvilken klasse?)
 
-Skriv i README filen, hvordan du har løst denne opgave. 
+#### Løsning opgave 9
+Jeg har tilføjet en boolean til mediaklassen. Den hed userGeneratedContent.
+Hvis true, så er det bruger genereret og hvis false er det lavet af TV2.dk
 
 Commit ændringerne.
 
