@@ -1,5 +1,8 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Date;
@@ -25,6 +28,19 @@ public class Media {
         assetId = MediaID.generate();
         //The class variable created gets assigned using now() method from the Java class Instant
         created = Date.from(Instant.now());
+    }
+
+    public void saveToDB() {
+        try {
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/tv2dk?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "");
+            Statement st = con.createStatement();
+
+            st.executeUpdate("INSERT INTO mediadata(assetid, name, date, filename) VALUES (" + assetId + ", '" + name
+             + "', '" + created.toString() + "', '" + fileName + "');");
+
+        } catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
     public void logToConsole(){

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Article</OriginalElement>
+  <nodes>
+    <node x="0.0" y="44.5">MediaID</node>
+    <node x="425.875" y="648.0">Test</node>
+    <node x="578.0" y="0.0">Picture</node>
+    <node x="356.0" y="0.0">Video</node>
+    <node x="160.0" y="11.0">Article</node>
+    <node x="0.0" y="744.0">MediaManager</node>
+    <node x="286.0" y="223.0">Media</node>
+    <node x="261.375" y="502.0">Main</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Test" target="Main">
+      <point x="-40.66666666666663" y="-25.5" />
+      <point x="446.20833333333337" y="623.0" />
+      <point x="368.875" y="623.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+    <edge source="Picture" target="Media">
+      <point x="53.75" y="81.5" />
+      <point x="739.25" y="203.0" />
+      <point x="509.7857142857143" y="203.0" />
+      <point x="103.28571428571428" y="-114.5" />
+    </edge>
+    <edge source="Media" target="MediaID">
+      <point x="-103.28571428571422" y="-114.5" />
+      <point x="303.2142857142858" y="203.0" />
+      <point x="70.0" y="203.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="Media" target="Article">
+      <point x="-68.85714285714278" y="-114.5" />
+      <point x="337.6428571428572" y="193.0" />
+      <point x="204.0" y="193.0" />
+      <point x="-44.0" y="70.5" />
+    </edge>
+    <edge source="Media" target="Picture">
+      <point x="68.85714285714289" y="-114.5" />
+      <point x="475.3571428571429" y="193.0" />
+      <point x="631.75" y="193.0" />
+      <point x="-53.75" y="81.5" />
+    </edge>
+    <edge source="Media" target="Video">
+      <point x="0.0" y="-114.5" />
+      <point x="-50.5" y="81.5" />
+    </edge>
+    <edge source="Test" target="Media">
+      <point x="0.0" y="-25.5" />
+      <point x="486.875" y="477.0" />
+      <point x="436.625" y="477.0" />
+      <point x="30.125" y="114.5" />
+    </edge>
+    <edge source="Article" target="Media">
+      <point x="44.0" y="70.5" />
+      <point x="292.0" y="183.0" />
+      <point x="372.0714285714286" y="183.0" />
+      <point x="-34.42857142857139" y="-114.5" />
+    </edge>
+    <edge source="Video" target="Media">
+      <point x="50.5" y="81.5" />
+      <point x="507.5" y="183.0" />
+      <point x="440.92857142857144" y="183.0" />
+      <point x="34.428571428571445" y="-114.5" />
+    </edge>
+    <edge source="Main" target="Media">
+      <point x="53.75" y="-48.0" />
+      <point x="422.625" y="477.0" />
+      <point x="376.375" y="477.0" />
+      <point x="-30.125" y="114.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="268.0" y="596.0" />
+  <SelectedNodes>
+    <node>Article</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

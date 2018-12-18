@@ -17,6 +17,7 @@ public class Main {
         for (String s: media.readMediaFolder("media")) {
             System.out.println(s);
         }
+        media.saveToDB();
 
     }
 }
