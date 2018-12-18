@@ -17,7 +17,7 @@ public class Main extends Application {
      * @param args
      */
     public static void main(String[] args) {
-        
+
         Media media = new Media();
         for (String s: media.readMediaFolder("media")) {
             System.out.println(s);
