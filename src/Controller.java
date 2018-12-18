@@ -11,6 +11,7 @@ public class Controller {
     TextArea outputTextArea;
 
 
+
     public void SearchFolder(ActionEvent actionEvent) {
         Media m = new Media();
         String[] names = m.readMediaFolder(folderNameText.getText());
@@ -20,4 +21,6 @@ public class Controller {
 
         }
     }
+
+
 }

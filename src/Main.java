@@ -18,10 +18,7 @@ public class Main extends Application {
      */
     public static void main(String[] args) {
 
-        Media media = new Media();
-        for (String s: media.readMediaFolder("media")) {
-            System.out.println(s);
-        }
+
         launch(args);
 
 
@@ -34,6 +31,13 @@ public class Main extends Application {
         primaryStage.setTitle("Files in folder");
         primaryStage.setScene(new Scene(root, 250, 400));
         primaryStage.show();
+
+        Stage stage2 = new Stage();
+        Parent root2 = FXMLLoader.load(getClass().getResource("DBGui.fxml"));
+        stage2.setTitle("Database GUI");
+        stage2.setScene(new Scene(root2, 310, 337));
+        stage2.show();
+
 
 
     }
