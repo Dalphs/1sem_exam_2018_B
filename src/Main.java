@@ -14,8 +14,9 @@ public class Main {
 
         //The static method test is called from the Test class
         Media media = new Media();
-        media.setName("Hans");
-        media.logToConsole();
+        for (String s: media.readMediaFolder("media")) {
+            System.out.println(s);
+        }
 
     }
 }

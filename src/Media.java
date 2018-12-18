@@ -1,6 +1,10 @@
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.Scanner;
 
 public class Media {
 
@@ -26,6 +30,37 @@ public class Media {
     public void logToConsole(){
         System.out.println("Name: " + name + "\nMedia type : Media");
 
+    }
+
+    public void logMediaFolder(String folderName){
+        File file = new File("./" + folderName);
+        File[] listOfFiles = file.listFiles();
+        for (File f: listOfFiles) {
+            if (f.isFile())
+                System.out.println("File: " + f.getName());
+        }
+
+    }
+
+    public String[] readMediaFolder(String folderName){
+        File file = new File("./" + folderName);
+        File[] listOfFiles = file.listFiles();
+        String[] names = new String[listOfFiles.length];
+        for (int i = 0; i < listOfFiles.length; i++) {
+            names[i] = listOfFiles[i].getName();
+        }
+
+        ArrayList<Media> mediaObjects = new ArrayList<>();
+
+        for (File f: listOfFiles) {
+            if(f.getName().contains(".txt"))
+                mediaObjects.add(new Article());
+            else if (f.getName().contains(".jpg") || f.getName().contains(".png") || f.getName().contains(".gif"))
+                mediaObjects.add(new Picture());
+            else if (f.getName().contains(".mp4") || f.getName().contains(".m4v") || f.getName().contains(".mov"))
+                mediaObjects.add(new Video());
+        }
+        return names;
     }
 
     //These 8 methods are getters and setters for the private instance variables
