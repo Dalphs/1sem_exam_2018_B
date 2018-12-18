@@ -17,8 +17,7 @@ public class Main extends Application {
      * @param args
      */
     public static void main(String[] args) {
-
-        //The static method test is called from the Test class
+        
         Media media = new Media();
         for (String s: media.readMediaFolder("media")) {
             System.out.println(s);
@@ -29,6 +28,7 @@ public class Main extends Application {
 
     }
 
+    //This method will start the Gui.FXML which contains the GUI
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("Gui.fxml"));
         primaryStage.setTitle("Files in folder");
