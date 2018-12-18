@@ -38,6 +38,12 @@ public class Main extends Application {
         stage2.setScene(new Scene(root2, 310, 337));
         stage2.show();
 
+        Stage stage3 = new Stage();
+        Parent root3 = FXMLLoader.load(getClass().getResource("PictureGUI.fxml"));
+        stage3.setTitle("Picture shower");
+        stage3.setScene(new Scene(root3, 336, 400));
+        stage3.show();
+
 
 
     }
