@@ -13,7 +13,9 @@ public class Main {
     public static void main(String[] args) {
 
         //The static method test is called from the Test class
-        Test.test();
+        Media media = new Media();
+        media.setName("Hans");
+        media.logToConsole();
 
     }
 }

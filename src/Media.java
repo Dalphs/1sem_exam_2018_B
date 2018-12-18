@@ -5,7 +5,7 @@ import java.util.Date;
 public class Media {
 
     /**
-     * This class has four private class variables, two Strings, an int and a Date
+     * This class has four private instance variables, two Strings, an int and a Date
      */
     private int assetId;
     private String name;
@@ -23,7 +23,12 @@ public class Media {
         created = Date.from(Instant.now());
     }
 
-    //These 8 methods are getters and setters for the private class variables
+    public void logToConsole(){
+        System.out.println("Name: " + name + "\nMedia type : Media");
+
+    }
+
+    //These 8 methods are getters and setters for the private instance variables
     //They are used for accesing and modifying the variables from outside the class
     //The 4 setter methods are void, and the 4 getters returns variables.
     public int getAssetId() {
